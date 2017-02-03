@@ -27,21 +27,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * LogstashMessageParser extracts timestamp field (specified by 'message.timestamp.name')
- * usually named @timestamp in logstash.
+ * DataLakeMessageParser extracts timestamp field (specified by 'message.timestamp.name')
+ * usually named timestamp in analytics.
  * It uses the ISODateTimeFormat from joda-time library. Used by elasticsearch / logstash
  *
  * @see http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html
  *
- * @author Pablo Delgado (pablete@gmail.com)
+ * @author Rahul  Bhatia (rbhatia@opentable.com)
  *
  */
-public class LogstashMessageParser extends MessageParser {
-    private static final Logger LOG = LoggerFactory.getLogger(LogstashMessageParser.class);
+public class DataLakeMessageParser extends MessageParser {
+    private static final Logger LOG = LoggerFactory.getLogger(DataLakeMessageParser.class);
     protected static final String defaultType = "untyped";
     protected static final String defaultDate = "1970/01/01/00";
 
-    public LogstashMessageParser(SecorConfig config) {
+    public DataLakeMessageParser(SecorConfig config) {
         super(config);
     }
     @Override
