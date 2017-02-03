@@ -105,11 +105,8 @@ public class DataLakeMessageParser extends MessageParser {
             return false;
         }
         final JSONObject properties = (JSONObject) propertiesObject;
-        if (!properties.containsKey("platform")) {
-            return false;
-        }
-        final Object platformObject = properties.get("platform");
-        if (!(platformObject instanceof String)) {
+
+        if (!(eventObject instanceof String)) {
             return false;
         }
         final String platform = (String) platformObject;
