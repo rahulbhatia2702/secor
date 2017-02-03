@@ -109,7 +109,7 @@ public class DataLakeMessageParser extends MessageParser {
         if (!(eventObject instanceof String)) {
             return false;
         }
-        final String platform = (String) platformObject;
+ 
         final String event_name = (String) eventObject;
 
         final boolean ret = "session_start".equals(event_name);
